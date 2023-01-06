@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React first class</title>
+</head>
+<body>
+    <!-- Hello World using HTML -->
+    <!-- <h1>Hello everyone from HTML</h1> -->
+    <div id="root">
+        <h1>Wow</h1>
+        <h1>Wow</h1>
+        <h1>Wow</h1>
+        <h1>Wow</h1>
+        <h1>Wow</h1>
+    </div>
+
+<!-- Hello World using JavaScript -->
+<!-- <script>
+   const heading= document.createElement("h1");
+   heading.innerHTML="Hello Everyone from JAVASCRIPT";
+   const rootEl= document.getElementById("root")
+   rootEl.appendChild(heading)
+</script> -->
+<!-- Hello World using React -->
+<script 
+crossorigin src="https://unpkg.com/react@18/umd/react.development.js">
+</script>
+<script 
+crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
+</script>
+<script>
+
+    const heading = React.createElement("h1", {}, "Namaste Everyone")
+    console.log(heading) // This will give an object with type "h1" and this is done with CDN code they converted the argument of createElement into a JavaScript Object
+    // React element is basically an object
+    const root = ReactDOM.createRoot(document.getElementById("root"))
+
+    //Here we are passing an element inside the root, through render method it modifies the DOM
+    root.render(heading)
+</script>
+</body>
+</html>
